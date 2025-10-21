@@ -83,11 +83,19 @@ from CasambiBt import (  # noqa: E402  # pylint: disable=wrong-import-position
     UnitState,
     _operation,
 )
+from CasambiBt.errors import (  # noqa: E402  # pylint: disable=wrong-import-position
+    AuthenticationError,
+    BluetoothError,
+    NetworkNotFoundError,
+)
 
 __all__ = [
+    "AuthenticationError",
+    "BluetoothError",
     "Casambi",
     "ColorSource",
     "Group",
+    "NetworkNotFoundError",
     "Scene",
     "Unit",
     "UnitControlType",
