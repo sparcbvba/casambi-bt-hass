@@ -8,7 +8,6 @@ import logging
 from pathlib import Path
 from typing import Final
 
-from CasambiBt import Casambi, Group, Scene, Unit, UnitControlType
 from CasambiBt.errors import AuthenticationError, BluetoothError, NetworkNotFoundError
 
 from homeassistant.components import bluetooth
@@ -22,6 +21,7 @@ from homeassistant.exceptions import (
 )
 from homeassistant.helpers.httpx_client import get_async_client
 
+from .casambi_import import Casambi, Group, Scene, Unit, UnitControlType
 from .const import DOMAIN, PLATFORMS
 
 _LOGGER: Final = logging.getLogger(__name__)
