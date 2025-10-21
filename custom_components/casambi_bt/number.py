@@ -6,8 +6,6 @@ from abc import ABCMeta
 import logging
 from typing import cast
 
-from CasambiBt import Group, Unit, UnitControlType
-
 from homeassistant.components.number import (
     NumberDeviceClass,
     NumberEntity,
@@ -18,6 +16,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import CasambiApi
+from .casambi_import import Group, Unit, UnitControlType
 from .const import CONF_IMPORT_GROUPS, DOMAIN
 from .entities import (
     CasambiEntity,

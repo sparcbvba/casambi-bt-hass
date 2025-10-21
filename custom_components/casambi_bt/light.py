@@ -7,8 +7,6 @@ from copy import copy
 import logging
 from typing import Any, Final, cast
 
-from CasambiBt import ColorSource, Group, Unit, UnitControlType, UnitState, _operation
-
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
     ATTR_COLOR_TEMP_KELVIN,
@@ -24,6 +22,14 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import CasambiApi
+from .casambi_import import (
+    ColorSource,
+    Group,
+    Unit,
+    UnitControlType,
+    UnitState,
+    _operation,
+)
 from .const import CONF_IMPORT_GROUPS, DOMAIN
 from .entities import (
     CasambiEntity,

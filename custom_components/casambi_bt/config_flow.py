@@ -6,8 +6,6 @@ from collections.abc import Mapping
 import logging
 from typing import Any
 
-from CasambiBt import Casambi
-from CasambiBt.errors import AuthenticationError, NetworkNotFoundError
 import voluptuous as vol
 
 from homeassistant import config_entries
@@ -24,6 +22,7 @@ from homeassistant.helpers.device_registry import format_mac
 from homeassistant.helpers.httpx_client import get_async_client
 
 from . import get_cache_dir
+from .casambi_import import AuthenticationError, Casambi, NetworkNotFoundError
 from .const import CONF_IMPORT_GROUPS, DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
