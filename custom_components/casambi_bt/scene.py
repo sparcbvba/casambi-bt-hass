@@ -5,8 +5,6 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from CasambiBt import Scene
-
 from homeassistant.components.light import ATTR_BRIGHTNESS
 from homeassistant.components.scene import Scene as SceneEntity
 from homeassistant.config_entries import ConfigEntry
@@ -15,6 +13,7 @@ from homeassistant.helpers.entity import EntityDescription
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import CasambiApi
+from .casambi_import import Scene
 from .const import DOMAIN
 from .entities import CasambiNetworkEntity
 
